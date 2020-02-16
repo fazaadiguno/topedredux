@@ -1,4 +1,4 @@
-This project is deployed at [https://epic-jepsen-a9f98a.netlify.com/] (this Netlify link).
+This project is deployed at https://epic-jepsen-a9f98a.netlify.com/
 
 ## Available Scripts
 
