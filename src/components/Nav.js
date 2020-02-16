@@ -58,9 +58,12 @@ function Nav() {
         <Link to="/" pt={3} mr={20}>
           Pokemon List{"  "}
         </Link>
-
+        <Text style={{ cursor: "default" }} color="black">
+          Poke
+        </Text>
         <Link to="/mypokemon" pt={3} ml="5em">
-          {"  "} My Pokemon
+          {"  "}
+          My Pokemons
         </Link>
       </Flex>
       <Flex display={["flex", "flex", "flex", "none"]}>

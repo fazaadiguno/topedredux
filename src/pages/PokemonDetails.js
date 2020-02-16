@@ -66,7 +66,7 @@ function PokemonDetails({ match }) {
           if (random_boolean) {
             onOpen();
           } else {
-            alert("Oh no!, the pokemon escaped!");
+            alert("Oh no! The pokemon escaped!");
           }
         }}
       >
@@ -130,9 +130,13 @@ function PokemonDetails({ match }) {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>
-            Hurray, you succesfully caught a {detail.name}! You can give it a
-            nickname if you want.
+          <ModalHeader fontFamily="IBM Plex Sans" fontWeight="500">
+            Hurray, you succesfully caught{" "}
+            {detail.name &&
+              (detail.name[0].match("^[aieouAIEOU].*") ? "an" : "a")}{" "}
+            {detail.name && detail.name[0].toUpperCase()}
+            {detail.name && detail.name.substr(1)}! You can give it a nickname
+            if you want.
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>

@@ -1,7 +1,6 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -9,15 +8,15 @@ import {
   Button,
   useDisclosure,
   Box,
-  Link
+  Text
 } from "@chakra-ui/core";
+import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import React from "react";
 
 export default function DrawerBurger() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  // const { isLoggedIn } = Auth.useContainer()
 
   return (
     <>
@@ -34,16 +33,17 @@ export default function DrawerBurger() {
           </DrawerHeader>
           <DrawerBody
             fontFamily="IBM Plex Sans"
-            fontSize="24"
+            fontSize={28}
             flexDirection="column"
           >
             <Box ml={-2}>
-              <Link onClick={onClose} href="/" pt={3} pr={20}>
-                Pokemon List
+              <Link to="/">
+                <Text fontFamily="IBM Plex Sans" my={4}>
+                  Pokemon List
+                </Text>
               </Link>
-              <br />
-              <Link onClick={onClose} href="/mypokemon" pt={3} pr={20}>
-                My Pokemon
+              <Link to="/mypokemon">
+                <Text fontFamily="IBM Plex Sans">My Pokemon</Text>
               </Link>
             </Box>
           </DrawerBody>
