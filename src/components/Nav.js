@@ -3,15 +3,10 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import Lottie from "react-lottie";
 import animationData from "../assets/lf30_editor_u5tNDC.json";
-import { Flex, Box, Image, Text } from "@chakra-ui/core";
+import { Flex, Text } from "@chakra-ui/core";
 import DrawerBurger from "./DrawerBurger";
 
 function Nav() {
-  // const navStyle = {
-  //   color: "white",
-  //   textDecoration: "none"
-  // };
-
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -70,20 +65,6 @@ function Nav() {
         <DrawerBurger />
       </Flex>
     </Flex>
-    // <nav>
-    //   <Lottie options={defaultOptions} width={80} />
-    //   <h3>Faza's Pokedex</h3>
-    //   <ul className="nav-links">
-    //     <Link style={navStyle} to="/">
-    //       {" "}
-    //       <li>Pokemon List</li>
-    //     </Link>
-    //     <Link style={navStyle} to="/mypokemon">
-    //       {" "}
-    //       <li>My Pokemons</li>{" "}
-    //     </Link>
-    //   </ul>
-    // </nav>
   );
 }
 
